@@ -3,6 +3,12 @@ from pydantic import BaseModel
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
+from huggingface_hub import login
+import os
+
+# Automatically login
+login(token=os.getenv("HUGGINGFACE_TOKEN"))
+
 app = FastAPI(title="ModelBox")
 
 # Supported models (can add more)
