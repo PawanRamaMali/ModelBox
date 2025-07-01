@@ -41,6 +41,25 @@ uvicorn main:app --reload
 
 ---
 
+## Using Docker 
+
+```
+docker build -t modelbox .
+
+docker run -p 8000:8000 modelbox
+```
+
+## Project Structure 
+
+```
+ModelBox/
+├── Dockerfile
+├── README.md
+└── app/
+    ├── main.py
+    └── requirements.txt
+
+```
 ## ⚙️ API Endpoints
 
 ### `POST /load_model/`
